@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZFIORI_REPORT_KCC_DIS_COST_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Output" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Fu"/>
+                    <PropertyRef Name="Fo"/>
+                </Key>
+                <Property Name="Fu" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Unidad de Porte" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Fo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Orden" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DescItem" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Descrip.posición" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Entrega" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="Entrega" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Dtr" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="DTR" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Fwo" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="FWO" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="DistImporte" Type="Edm.Decimal" Precision="28" Scale="6" sap:unicode="false" sap:label="Importe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Moneda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityContainer Name="ZFIORI_REPORT_KCC_DIS_COST_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="OutputSet" EntityType="ZFIORI_REPORT_KCC_DIS_COST_SRV.Output" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://devtms:8000/sap/opu/odata/sap/ZFIORI_REPORT_KCC_DIS_COST_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://devtms:8000/sap/opu/odata/sap/ZFIORI_REPORT_KCC_DIS_COST_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
